@@ -51,12 +51,26 @@ To add new code to this repository:
 
 Your new code will automatically be available to run using the methods above.
 
+## Using the Alias (Easiest)
+
+A convenient `gorun` script is included in this repository. You can set it up as an alias or add it to your PATH for easier access.
+
+```bash
+# After setting up the alias as described in alias_setup.txt
+gorun data-structures/stack
+gorun hello
+```
+
+See the `alias_setup.txt` file for instructions on how to set up the alias.
+
 ## Examples
 
 ```bash
 # Run the stack implementation
 make run PROGRAM=data-structures/stack
+gorun data-structures/stack  # Using the alias after setup
 
 # Run the hello world application
 make run PROGRAM=hello
+gorun hello  # Using the alias after setup
 ```

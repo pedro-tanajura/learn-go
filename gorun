@@ -1,0 +1,12 @@
+#!/bin/bash
+
+REPO_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [ $# -lt 1 ]; then
+    echo "Usage: gorun <program-path>"
+    echo "Example: gorun data-structures/stack"
+    echo "Example: gorun hello"
+    exit 1
+fi
+
+cd "$REPO_PATH" && make run PROGRAM="$1"

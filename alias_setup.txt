@@ -1,0 +1,47 @@
+# Instructions for setting up the 'gorun' alias
+
+## Option 1: Add to your ~/.zshrc file
+
+Open your ~/.zshrc file in a text editor:
+
+```bash
+nano ~/.zshrc
+```
+
+Add the following line at the end of the file:
+
+```bash
+alias gorun="your-path-to/learn-go/gorun"
+```
+
+Save and close the file, then reload your zsh configuration:
+
+```bash
+source ~/.zshrc
+```
+
+## Option 2: Create a symbolic link in a directory in your PATH
+
+If you prefer, you can create a symbolic link in a directory that's already in your PATH:
+
+```bash
+ln -s your-path-to/learn-go/gorun /usr/local/bin/gorun
+```
+
+This will make the 'gorun' command available system-wide without needing to set up an alias.
+
+## Usage
+
+Once set up, you can run any program in the repository with:
+
+```bash
+gorun data-structures/stack
+gorun hello
+```
+
+This is equivalent to running:
+
+```bash
+make run PROGRAM=data-structures/stack
+make run PROGRAM=hello
+```
